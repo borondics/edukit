@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="myscript.js" charset="utf-8"></script>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="randomWord.js" charset="utf-8"></script>
+	<script type="text/javascript" src="data.json" charset="utf-8"></script>
+
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<style>		
 		html, body {
 			background-color: #757761;
 		}
 		
-		#middle {
+		#changeButton {
 			left: 0;
 			line-height: 100px;
 			margin-top: -200px;
 			position: absolute;
 			text-align: center;
 			color: #DDD163;
+			background-color: #757761;
+			border: 0px;
+			outline-width: 0;
 			top: 50%;
-			width: 80%;
+			width: 100%;
 			font-family: 'Raleway', sans-serif;
 			font-size: 52px;
 		}
 	</style>
 </head>
-<body>
+<body onload=loadText()>
 
-	<div id="middle">
-		<div id="word">&nbsp;</div>
-
-		<button type="button" onclick="myFunction()" style="font-family: 'Stylish', sans-serif; font-size: 30px;">Try it</button>
-	</div>
+		<button id="changeButton" type="button" onclick="displayRandomWord()">Click me!</button>
 </body>
 </html> 
