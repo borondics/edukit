@@ -1,7 +1,7 @@
 function loadText() {
 	var stringAllText = JSON.stringify(allText);
 	var myText = JSON.parse(stringAllText);
-	var s = myText[0].content;
+	var s = myText[1].content;
 
 	document.getElementById('changeButton').focus();
 	
