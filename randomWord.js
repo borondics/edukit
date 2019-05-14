@@ -5,6 +5,7 @@ function loadText() {
 //	console.log(s);
 
 	document.getElementById('changeButton').focus();
+	
 	return s;
 }
 
@@ -13,7 +14,6 @@ function displayRandomWord() {
 	var s = loadText();
 	
 	var sentences = s.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|")
-	console.log(sentences);
 	
 	var punctuationless = s.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?0-9«<>≪≫]/g,"");
 	var finalString = punctuationless.replace(/\s{2,}/g," ");
@@ -21,16 +21,12 @@ function displayRandomWord() {
 	var wordItems = finalString.split(' ');
 	var wordItem = wordItems[Math.floor(Math.random()*wordItems.length)];
 
-	//var sentenceItems = sentences.split(' ');
-//	var sentenceItem = sentenceItems[Math.floor(Math.random()*sentenceItems.length)];
 	var sentenceItem = sentences[Math.floor(Math.random()*sentences.length)];
 
 //add color change
 	if (document.getElementById("sentence").checked == true) {
-		console.log(sentenceItem)
 		document.getElementById("changeButton").innerHTML = sentenceItem;
 	  } else {
-		console.log("word")
 		document.getElementById("changeButton").innerHTML = wordItem.toLowerCase();
 	  }
  

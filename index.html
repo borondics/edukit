@@ -13,14 +13,14 @@
 		
 		#changeButton {
 			left: 0;
-			line-height: 200px;
+			padding: 100px;
 			margin-top: -200px;
 			position: absolute;
 			text-align: center;
 			color: #DDD163;
 			background-color: #757761;
 			border: 0px;
-			outline-width: 0;
+			outline-width: 2px;
 			top: 50%;
 			width: 100%;
 			font-family: 'Raleway', sans-serif;
@@ -31,7 +31,7 @@
 <body onload=loadText()>
 
 	<button id="changeButton" type="button" onclick="displayRandomWord()">Click me!</button>
-	<p>Sentence<input type="checkbox" id="sentence"></p>
+	<p>Sentence<input type="checkbox" id="sentence" onclick="displayRandomWord()"></p>
   
 </body>
 
